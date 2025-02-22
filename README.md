@@ -130,13 +130,7 @@ rediscluster_slave_1      docker-entrypoint.sh redis ...   Up      6379/tcp
 rediscluster_slave_2      docker-entrypoint.sh redis ...   Up      6379/tcp            
 ```
 
-Execute the test scripts:
-```sh
-./test.sh
-```
-to simulate stop and recover the Redis master. And you will see the master is switched to slave automatically. 
-
-Or, you can do the test manually to pause/unpause redis server through:
+you can do the test manually to pause/unpause redis server through:
 ```sh
 docker pause rediscluster_master_1
 docker unpause rediscluster_master_1
